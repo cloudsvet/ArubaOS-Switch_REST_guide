@@ -242,7 +242,7 @@ You can check that information has been stored in mylogin.txt file::
 Give your interfaces nice random names
 --------------------------------------
 
-Have you heard about pets vs. cattle discussion? We will go agains trend and give our port pets nice random names.
+Have you heard about pets vs. cattle discussion? We will go against trend and give our port pets nice random names.
 
 We will use public random word service so make sure your station has Internet access.
 
@@ -257,7 +257,7 @@ This is niceport.py::
     login = json.loads(f.readlines()[0])
     f.close
 
-    # Read installed apps
+    # Get all ports
     url="https://" + login["ip"]  + "/rest/v1/ports"
 
     r = requests.get(url, verify=False, cookies=dict(sessionId=login["cookie"]))
